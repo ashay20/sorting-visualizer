@@ -1,0 +1,12 @@
+.array-container {
+    display:flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.array-bar {
+    width: 2px;
+    background-color: plum;
+    display: inline-block;
+    margin: 0 2px;
+}
