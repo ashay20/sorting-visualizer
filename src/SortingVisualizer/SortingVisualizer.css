@@ -7,6 +7,6 @@
 .array-bar {
     width: 2px;
     background-color: plum;
-    display: inline-block;
+    display: inline;
     margin: 0 2px;
 }
