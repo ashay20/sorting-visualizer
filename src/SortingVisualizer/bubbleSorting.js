@@ -1,11 +1,11 @@
 export function getBubbleSortAnimations(array) {
-    const animations = [];
-    let auxiliaryArray=array.slice();
-    bubbleSortHelper(animations,array,auxiliaryArray);
-    return animations;
+    const bubbleAnimations = [];
+    const auxiliaryArray=array.slice();
+    bubbleSortHelper(bubbleAnimations,array,auxiliaryArray);
+    return bubbleAnimations;
 }
 
-function bubbleSortHelper(animations,mainArray,auxiliaryArray){
+function bubbleSortHelper(bubbleAnimations,mainArray,auxiliaryArray){
     let endIdx=mainArray.length-1;
     let flag=false;
     let changeOne = 0;
@@ -19,9 +19,9 @@ function bubbleSortHelper(animations,mainArray,auxiliaryArray){
                 swap(auxiliaryArray, j, j+1);
             }
             if(flag){
-                animations.push([changeOne, changeTwo]);
-                animations.push([changeOne, changeTwo]);
-                animations.push([mainArray.length-i-1, auxiliaryArray[mainArray.length-i-1]]);
+                bubbleAnimations.push([changeOne, changeTwo]);
+                bubbleAnimations.push([changeOne, changeTwo]);
+                bubbleAnimations.push([mainArray.length-i-1, auxiliaryArray[mainArray.length-i-1]]);
             }
             else{
                 // mainArray[0]=auxiliaryArray[0];
@@ -33,9 +33,9 @@ function bubbleSortHelper(animations,mainArray,auxiliaryArray){
     }
     console.log(arraysAreEqual(mainArray, auxiliaryArray));
     mainArray[0]=auxiliaryArray[0];
-    animations.push([0, 0]);
-    animations.push([0, 0]);
-    animations.push([0, auxiliaryArray[0]]);
+    bubbleAnimations.push([0, 0]);
+    bubbleAnimations.push([0, 0]);
+    bubbleAnimations.push([0, auxiliaryArray[0]]);
     console.log(mainArray);
     console.log(auxiliaryArray);
     console.log(arraysAreEqual(mainArray, auxiliaryArray));
